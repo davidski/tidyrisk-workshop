@@ -1,5 +1,5 @@
 ---
-title: "TidyRisk Workshop"
+title: "TidyRisk Workshop - Exercise 2"
 output: 
   html_notebook: 
     highlight: pygments
@@ -7,58 +7,44 @@ output:
     toc: yes
 ---
 
+## Exercise 2 - Estimate the Parameters
+
 ```{r setup, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(evaluator)
 ```
 
-## Exercise 1 - Identify the OpenFAIR factors
+Record the parameters for your scenario.
 
+### Threat Expected Frequency (TEF)
 
-## Exercise 2 - Estimate the Parameters
+How many times per year could the threat action occur against the asset?
 
-## Exercise 3 - Run a Simulation with the OpenFAIR Example
+High - 
+Low - 
+Confidence - 
 
-```{r}
-openfair_example()
-```
+### Threat Capability (TC)
 
-## Exercise 4 - Console Interaction
+How hard (measured as a percentage) does the threat action push against the asset?
 
-Insert a new scenario with the evaluator addin (CMD+SHIFT+B on MacOS).
+High - 
+Low - 
+Confidence - 
 
-```{r}
-my_scen <- tidyrisk_scenario(
-        tef_params = list(min = 1, mode = 10, max = 100, shape = 3, func = "mc2d::rpert"),
-        tc_params = list(min = .20, mode = .30, max = .70, shape = 2, func = "mc2d::rpert"),
-        diff_params = list(list(min = .25, mode = .50, max = .60, shape = 3, func = "mc2d::rpert")),
-        lm_params = list(min = 100, mode = 1000, max = 10000, shape = 3, func = "mc2d::rpert"))
+### Difficulty (DIFF)
 
-my_results <- run_simulation(my_scen, iterations = 1000)
-```
+How well (measured as a percentage) does the asset resist the action?
 
+High - 
+Low - 
+Confidence
 
-```{r}
-my_results
-```
+### Loss Magnitude (LM)
 
-```{r}
-summarize_scenario(my_results)
-```
-```{r}
-loss_scatterplot(my_results)
-```
-```{r}
-my_results %>% mutate(scenario_id = 1 ) %>% 
-  nest(.key = results) %>% 
-  calculate_max_losses() %>% loss_exceedance_curve()
-```
+How much (measured in dollars) does a single loss event cost the organization?
 
-```{r}
-exposure_histogram(my_results)
-```
+High - 
+Low - 
+Confidence - 
 
-## Exercise 5 - From One to Many
-```{r}
-
-```

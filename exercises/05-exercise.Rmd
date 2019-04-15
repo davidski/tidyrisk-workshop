@@ -1,5 +1,5 @@
 ---
-title: "TidyRisk Workshop"
+title: "TidyRisk Workshop - Exercise 5"
 output: 
   html_notebook: 
     highlight: pygments
@@ -7,58 +7,15 @@ output:
     toc: yes
 ---
 
+## Exercise 5 - From One to Many
+
 ```{r setup, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(evaluator)
 ```
 
-## Exercise 1 - Identify the OpenFAIR factors
-
-
-## Exercise 2 - Estimate the Parameters
-
-## Exercise 3 - Run a Simulation with the OpenFAIR Example
 
 ```{r}
-openfair_example()
-```
-
-## Exercise 4 - Console Interaction
-
-Insert a new scenario with the evaluator addin (CMD+SHIFT+B on MacOS).
-
-```{r}
-my_scen <- tidyrisk_scenario(
-        tef_params = list(min = 1, mode = 10, max = 100, shape = 3, func = "mc2d::rpert"),
-        tc_params = list(min = .20, mode = .30, max = .70, shape = 2, func = "mc2d::rpert"),
-        diff_params = list(list(min = .25, mode = .50, max = .60, shape = 3, func = "mc2d::rpert")),
-        lm_params = list(min = 100, mode = 1000, max = 10000, shape = 3, func = "mc2d::rpert"))
-
-my_results <- run_simulation(my_scen, iterations = 1000)
-```
-
-
-```{r}
-my_results
-```
-
-```{r}
-summarize_scenario(my_results)
-```
-```{r}
-loss_scatterplot(my_results)
-```
-```{r}
-my_results %>% mutate(scenario_id = 1 ) %>% 
-  nest(.key = results) %>% 
-  calculate_max_losses() %>% loss_exceedance_curve()
-```
-
-```{r}
-exposure_histogram(my_results)
-```
-
-## Exercise 5 - From One to Many
-```{r}
-
+ex_data <- read_quantitative_inputs(here::here("exercises/data/"))
+my_scenarios <- ex_data$quantitative_scenarios
 ```

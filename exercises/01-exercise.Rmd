@@ -1,5 +1,5 @@
 ---
-title: "TidyRisk Workshop"
+title: "TidyRisk Workshop - Exercise 1"
 output: 
   html_notebook: 
     highlight: pygments
@@ -7,25 +7,17 @@ output:
     toc: yes
 ---
 
+## Exercise 1 - Identify the OpenFAIR factors
+
 ```{r setup, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(evaluator)
 ```
 
-## Exercise 1 - Identify the OpenFAIR factors
-
-
-## Exercise 2 - Estimate the Parameters
-
-## Exercise 3 - Run a Simulation with the OpenFAIR Example
-
-```{r}
-openfair_example()
+```{r echo=FALSE, fig.cap="OpenFAIR ontology", out.width = '100%'}
+knitr::include_graphics("figures/openfair_ontology.png")
 ```
 
-## Exercise 4 - Console Interaction
-
-Insert a new scenario with the evaluator addin (CMD+SHIFT+B on MacOS).
 
 ```{r}
 my_scen <- tidyrisk_scenario(
@@ -35,30 +27,6 @@ my_scen <- tidyrisk_scenario(
         lm_params = list(min = 100, mode = 1000, max = 10000, shape = 3, func = "mc2d::rpert"))
 
 my_results <- run_simulation(my_scen, iterations = 1000)
-```
-
-
-```{r}
-my_results
-```
-
-```{r}
-summarize_scenario(my_results)
-```
-```{r}
-loss_scatterplot(my_results)
-```
-```{r}
-my_results %>% mutate(scenario_id = 1 ) %>% 
-  nest(.key = results) %>% 
-  calculate_max_losses() %>% loss_exceedance_curve()
-```
-
-```{r}
-exposure_histogram(my_results)
-```
-
-## Exercise 5 - From One to Many
-```{r}
 
 ```
+
