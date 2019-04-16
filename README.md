@@ -36,7 +36,7 @@ For a more in depth read, these books are highly recommended:
 * How to Measure Anything in Cybersecurity Risk, by Douglas Hubbard and 
   Richard Seiersen, https://www.amazon.com/How-Measure-Anything-Cybersecurity-Risk/dp/1119085292
 * Measuring and Managing Information Risk: A FAIR Approach, by Jack Freund and 
-  Jack Jones, http://www.amazon.com/Measuring-Managing-Information-Risk-Approach/dp/0124202314  
+  Jack Jones, https://www.amazon.com/Measuring-Managing-Information-Risk-Approach/dp/0124202314  
 
 # R Setup
 
@@ -53,7 +53,7 @@ install.packages("evaluator", dependencies = TRUE)
 ```
 
 Using RStudio is strongly encouraged. Please make sure you have a current
-version. RStudio 1.2 is current reliease as of April 2019. You 
+version. RStudio 1.2 is current release as of April 2019. You 
 can download from https://www.rstudio.com/products/rstudio/download/#download.
   
 If you often work on a network drive, it is worth verifying you can load the 
