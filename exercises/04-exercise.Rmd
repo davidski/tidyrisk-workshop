@@ -18,6 +18,7 @@ With your cursor in the block below, use the evaluator addin to insert a new
 scenario skeleton. Then populate each of the factors with your estimates.
 
 ```{r}
+# populate this chunk with your scenario
 
 ```
 

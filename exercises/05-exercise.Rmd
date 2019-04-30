@@ -14,8 +14,14 @@ library(tidyverse)
 library(evaluator)
 ```
 
+### Sample risk report
 
-```{r}
-ex_data <- read_quantitative_inputs(here::here("exercises/data/"))
-my_scenarios <- ex_data$quantitative_scenarios
-```
+https://evaluator.tidyrisk.org/reports/evaluator_risk_analysis.html
+
+### Sample risk dashboard
+
+https://evaluator.tidyrisk.org/reports/evaluator_risk_dashboard.html
+
+### Review the sample scenario explorer
+
+https://davidski.shinyapps.io/scenario_explorer

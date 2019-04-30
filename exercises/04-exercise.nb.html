@@ -1891,6 +1891,15 @@ $(document).ready(function () {
 <p>With your cursor in the block below, use the evaluator addin to insert a new scenario skeleton. Then populate each of the factors with your estimates.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfc2NlbiA8LSB0aWR5cmlza19zY2VuYXJpbyhcbiAgICAgICAgdGVmX3BhcmFtcyA9IGxpc3QobWluID0gMSwgbW9kZSA9IDEwLCBtYXggPSAxMDAsIHNoYXBlID0gMywgZnVuYyA9IFwibWMyZDo6cnBlcnRcIiksXG4gICAgICAgIHRjX3BhcmFtcyA9IGxpc3QobWluID0gLjIwLCBtb2RlID0gLjMwLCBtYXggPSAuNzAsIHNoYXBlID0gMiwgZnVuYyA9IFwibWMyZDo6cnBlcnRcIiksXG4gICAgICAgIGRpZmZfcGFyYW1zID0gbGlzdChsaXN0KG1pbiA9IC4yNSwgbW9kZSA9IC41MCwgbWF4ID0gLjYwLCBzaGFwZSA9IDMsIGZ1bmMgPSBcIm1jMmQ6OnJwZXJ0XCIpKSxcbiAgICAgICAgbG1fcGFyYW1zID0gbGlzdChtaW4gPSAxMDAsIG1vZGUgPSAxMDAwLCBtYXggPSAxMDAwMCwgc2hhcGUgPSAzLCBmdW5jID0gXCJtYzJkOjpycGVydFwiKSlcblxubXlfcmVzdWx0cyA8LSBydW5fc2ltdWxhdGlvbihteV9zY2VuLCBpdGVyYXRpb25zID0gMTAwMClcblxuYGBgIn0= -->
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">my_scen &lt;-<span class="st"> </span><span class="kw">tidyrisk_scenario</span>(</a>
+<a class="sourceLine" id="cb2-2" title="2">        <span class="dt">tef_params =</span> <span class="kw">list</span>(<span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">mode =</span> <span class="dv">10</span>, <span class="dt">max =</span> <span class="dv">100</span>, <span class="dt">shape =</span> <span class="dv">3</span>, <span class="dt">func =</span> <span class="st">&quot;mc2d::rpert&quot;</span>),</a>
+<a class="sourceLine" id="cb2-3" title="3">        <span class="dt">tc_params =</span> <span class="kw">list</span>(<span class="dt">min =</span> <span class="fl">.20</span>, <span class="dt">mode =</span> <span class="fl">.30</span>, <span class="dt">max =</span> <span class="fl">.70</span>, <span class="dt">shape =</span> <span class="dv">2</span>, <span class="dt">func =</span> <span class="st">&quot;mc2d::rpert&quot;</span>),</a>
+<a class="sourceLine" id="cb2-4" title="4">        <span class="dt">diff_params =</span> <span class="kw">list</span>(<span class="kw">list</span>(<span class="dt">min =</span> <span class="fl">.25</span>, <span class="dt">mode =</span> <span class="fl">.50</span>, <span class="dt">max =</span> <span class="fl">.60</span>, <span class="dt">shape =</span> <span class="dv">3</span>, <span class="dt">func =</span> <span class="st">&quot;mc2d::rpert&quot;</span>)),</a>
+<a class="sourceLine" id="cb2-5" title="5">        <span class="dt">lm_params =</span> <span class="kw">list</span>(<span class="dt">min =</span> <span class="dv">100</span>, <span class="dt">mode =</span> <span class="dv">1000</span>, <span class="dt">max =</span> <span class="dv">10000</span>, <span class="dt">shape =</span> <span class="dv">3</span>, <span class="dt">func =</span> <span class="st">&quot;mc2d::rpert&quot;</span>))</a>
+<a class="sourceLine" id="cb2-6" title="6"></a>
+<a class="sourceLine" id="cb2-7" title="7">my_results &lt;-<span class="st"> </span><span class="kw">run_simulation</span>(my_scen, <span class="dt">iterations =</span> <span class="dv">1000</span>)</a></code></pre></div>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1910,7 +1919,7 @@ $(document).ready(function () {
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfcmVzdWx0c1xuYGBgIn0= -->
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">my_results</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">my_results</a></code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1918,7 +1927,7 @@ $(document).ready(function () {
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyaXplX3NjZW5hcmlvKG15X3Jlc3VsdHMpXG5gYGAifQ== -->
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">summarize_scenario</span>(my_results)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">summarize_scenario</span>(my_results)</a></code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1926,7 +1935,7 @@ $(document).ready(function () {
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9zc19zY2F0dGVycGxvdChteV9yZXN1bHRzKVxuYGBgIn0= -->
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">loss_scatterplot</span>(my_results)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">loss_scatterplot</span>(my_results)</a></code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1934,14 +1943,14 @@ $(document).ready(function () {
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhwb3N1cmVfaGlzdG9ncmFtKG15X3Jlc3VsdHMpXG5gYGAifQ== -->
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">exposure_histogram</span>(my_results)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">exposure_histogram</span>(my_results)</a></code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeVJpc2sgV29ya3Nob3AgLSBFeGVyY2lzZSA0IgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6IAogICAgaGlnaGxpZ2h0OiBweWdtZW50cwogICAgdGhlbWU6IHlldGkKICAgIHRvYzogeWVzCi0tLQoKIyMgRXhlcmNpc2UgNCAtIENvbnNvbGUgSW50ZXJhY3Rpb24KCmBgYHtyIHNldHVwLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShldmFsdWF0b3IpCmBgYAoKV2l0aCB5b3VyIGN1cnNvciBpbiB0aGUgYmxvY2sgYmVsb3csIHVzZSB0aGUgZXZhbHVhdG9yIGFkZGluIHRvIGluc2VydCBhIG5ldyAKc2NlbmFyaW8gc2tlbGV0b24uIFRoZW4gcG9wdWxhdGUgZWFjaCBvZiB0aGUgZmFjdG9ycyB3aXRoIHlvdXIgZXN0aW1hdGVzLgoKYGBge3J9CgpgYGAKCiMjIFJldmlldyB0aGUgc2NlbmFyaW8gb2JqZWN0CgpQcmludCB0aGUgc2NlbmFyaW8gb2JqZWN0LCB3aGF0IG1vZGVsIGlzIHNlbGVjdGVkPwoKYGBge3J9CgpgYGAKCkRpc3BsYXkgdGhlIHNjZW5hcmlvIHBhcmFtZXRlcnMgYnkgY2hhbmdpbmcgdGhlIHNjZW5hcmlvIG9iamVjdCB0byBhIHRpYmJsZS4KCmBgYHtyfQoKYGBgCgoKUnVuIHRoZSBzaW11bGF0aW9uLCB0aGVuIGxvb2sgYXQgdGhlIHJlc3VsdHMuCgpgYGB7cn0KbXlfcmVzdWx0cwpgYGAKCkRpc3BsYXkgdGhlIHN1bW1hcnkgcmVzdWx0cy4KCmBgYHtyfQpzdW1tYXJpemVfc2NlbmFyaW8obXlfcmVzdWx0cykKYGBgCgpMb29rIGF0IHRoZSBsb3NzIHNjYXR0ZXJwbG90LgoKYGBge3J9Cmxvc3Nfc2NhdHRlcnBsb3QobXlfcmVzdWx0cykKYGBgCgoKTG9zcyBhdCB0aGUgcmlzayBleHBvc3VyZSBoaXN0b2dyYW0uCgpgYGB7cn0KZXhwb3N1cmVfaGlzdG9ncmFtKG15X3Jlc3VsdHMpCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeVJpc2sgV29ya3Nob3AgLSBFeGVyY2lzZSA0IgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6IAogICAgaGlnaGxpZ2h0OiBweWdtZW50cwogICAgdGhlbWU6IHlldGkKICAgIHRvYzogeWVzCi0tLQoKIyMgRXhlcmNpc2UgNCAtIENvbnNvbGUgSW50ZXJhY3Rpb24KCmBgYHtyIHNldHVwLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShldmFsdWF0b3IpCmBgYAoKV2l0aCB5b3VyIGN1cnNvciBpbiB0aGUgYmxvY2sgYmVsb3csIHVzZSB0aGUgZXZhbHVhdG9yIGFkZGluIHRvIGluc2VydCBhIG5ldyAKc2NlbmFyaW8gc2tlbGV0b24uIFRoZW4gcG9wdWxhdGUgZWFjaCBvZiB0aGUgZmFjdG9ycyB3aXRoIHlvdXIgZXN0aW1hdGVzLgoKYGBge3J9CiMgcG9wdWxhdGUgdGhpcyBjaHVuayB3aXRoIHlvdXIgc2NlbmFyaW8KCmBgYAoKIyMgUmV2aWV3IHRoZSBzY2VuYXJpbyBvYmplY3QKClByaW50IHRoZSBzY2VuYXJpbyBvYmplY3QsIHdoYXQgbW9kZWwgaXMgc2VsZWN0ZWQ/CgpgYGB7cn0KCmBgYAoKRGlzcGxheSB0aGUgc2NlbmFyaW8gcGFyYW1ldGVycyBieSBjaGFuZ2luZyB0aGUgc2NlbmFyaW8gb2JqZWN0IHRvIGEgdGliYmxlLgoKYGBge3J9CgpgYGAKCgpSdW4gdGhlIHNpbXVsYXRpb24sIHRoZW4gbG9vayBhdCB0aGUgcmVzdWx0cy4KCmBgYHtyfQpteV9yZXN1bHRzCmBgYAoKRGlzcGxheSB0aGUgc3VtbWFyeSByZXN1bHRzLgoKYGBge3J9CnN1bW1hcml6ZV9zY2VuYXJpbyhteV9yZXN1bHRzKQpgYGAKCkxvb2sgYXQgdGhlIGxvc3Mgc2NhdHRlcnBsb3QuCgpgYGB7cn0KbG9zc19zY2F0dGVycGxvdChteV9yZXN1bHRzKQpgYGAKCgpMb3NzIGF0IHRoZSByaXNrIGV4cG9zdXJlIGhpc3RvZ3JhbS4KCmBgYHtyfQpleHBvc3VyZV9oaXN0b2dyYW0obXlfcmVzdWx0cykKYGBgCgo=</div>
 
 
 

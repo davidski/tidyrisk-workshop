@@ -1894,23 +1894,12 @@ $(document).ready(function () {
 <!-- rnb-plot-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfc2NlbiA8LSB0aWR5cmlza19zY2VuYXJpbyhcbiAgICAgICAgdGVmX3BhcmFtcyA9IGxpc3QobWluID0gMSwgbW9kZSA9IDEwLCBtYXggPSAxMDAsIHNoYXBlID0gMywgZnVuYyA9IFwibWMyZDo6cnBlcnRcIiksXG4gICAgICAgIHRjX3BhcmFtcyA9IGxpc3QobWluID0gLjIwLCBtb2RlID0gLjMwLCBtYXggPSAuNzAsIHNoYXBlID0gMiwgZnVuYyA9IFwibWMyZDo6cnBlcnRcIiksXG4gICAgICAgIGRpZmZfcGFyYW1zID0gbGlzdChsaXN0KG1pbiA9IC4yNSwgbW9kZSA9IC41MCwgbWF4ID0gLjYwLCBzaGFwZSA9IDMsIGZ1bmMgPSBcIm1jMmQ6OnJwZXJ0XCIpKSxcbiAgICAgICAgbG1fcGFyYW1zID0gbGlzdChtaW4gPSAxMDAsIG1vZGUgPSAxMDAwLCBtYXggPSAxMDAwMCwgc2hhcGUgPSAzLCBmdW5jID0gXCJtYzJkOjpycGVydFwiKSlcblxubXlfcmVzdWx0cyA8LSBydW5fc2ltdWxhdGlvbihteV9zY2VuLCBpdGVyYXRpb25zID0gMTAwMClcbmBgYCJ9 -->
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">my_scen &lt;-<span class="st"> </span><span class="kw">tidyrisk_scenario</span>(</a>
-<a class="sourceLine" id="cb2-2" title="2">        <span class="dt">tef_params =</span> <span class="kw">list</span>(<span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">mode =</span> <span class="dv">10</span>, <span class="dt">max =</span> <span class="dv">100</span>, <span class="dt">shape =</span> <span class="dv">3</span>, <span class="dt">func =</span> <span class="st">&quot;mc2d::rpert&quot;</span>),</a>
-<a class="sourceLine" id="cb2-3" title="3">        <span class="dt">tc_params =</span> <span class="kw">list</span>(<span class="dt">min =</span> <span class="fl">.20</span>, <span class="dt">mode =</span> <span class="fl">.30</span>, <span class="dt">max =</span> <span class="fl">.70</span>, <span class="dt">shape =</span> <span class="dv">2</span>, <span class="dt">func =</span> <span class="st">&quot;mc2d::rpert&quot;</span>),</a>
-<a class="sourceLine" id="cb2-4" title="4">        <span class="dt">diff_params =</span> <span class="kw">list</span>(<span class="kw">list</span>(<span class="dt">min =</span> <span class="fl">.25</span>, <span class="dt">mode =</span> <span class="fl">.50</span>, <span class="dt">max =</span> <span class="fl">.60</span>, <span class="dt">shape =</span> <span class="dv">3</span>, <span class="dt">func =</span> <span class="st">&quot;mc2d::rpert&quot;</span>)),</a>
-<a class="sourceLine" id="cb2-5" title="5">        <span class="dt">lm_params =</span> <span class="kw">list</span>(<span class="dt">min =</span> <span class="dv">100</span>, <span class="dt">mode =</span> <span class="dv">1000</span>, <span class="dt">max =</span> <span class="dv">10000</span>, <span class="dt">shape =</span> <span class="dv">3</span>, <span class="dt">func =</span> <span class="st">&quot;mc2d::rpert&quot;</span>))</a>
-<a class="sourceLine" id="cb2-6" title="6"></a>
-<a class="sourceLine" id="cb2-7" title="7">my_results &lt;-<span class="st"> </span><span class="kw">run_simulation</span>(my_scen, <span class="dt">iterations =</span> <span class="dv">1000</span>)</a></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
+<p>My scenario in the format of:</p>
+<p><em>Who/What</em> is doing <em>what action</em> against <em>what asset</em> that results in <em>what loss</em>?</p>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeVJpc2sgV29ya3Nob3AgLSBFeGVyY2lzZSAxIgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6IAogICAgaGlnaGxpZ2h0OiBweWdtZW50cwogICAgdGhlbWU6IHlldGkKICAgIHRvYzogeWVzCi0tLQoKIyMgRXhlcmNpc2UgMSAtIElkZW50aWZ5IHRoZSBPcGVuRkFJUiBmYWN0b3JzCgpgYGB7ciBzZXR1cCwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRX0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZXZhbHVhdG9yKQpgYGAKCmBgYHtyIGVjaG89RkFMU0UsIGZpZy5jYXA9Ik9wZW5GQUlSIG9udG9sb2d5Iiwgb3V0LndpZHRoID0gJzEwMCUnfQprbml0cjo6aW5jbHVkZV9ncmFwaGljcygiZmlndXJlcy9vcGVuZmFpcl9vbnRvbG9neS5wbmciKQpgYGAKCgpgYGB7cn0KbXlfc2NlbiA8LSB0aWR5cmlza19zY2VuYXJpbygKICAgICAgICB0ZWZfcGFyYW1zID0gbGlzdChtaW4gPSAxLCBtb2RlID0gMTAsIG1heCA9IDEwMCwgc2hhcGUgPSAzLCBmdW5jID0gIm1jMmQ6OnJwZXJ0IiksCiAgICAgICAgdGNfcGFyYW1zID0gbGlzdChtaW4gPSAuMjAsIG1vZGUgPSAuMzAsIG1heCA9IC43MCwgc2hhcGUgPSAyLCBmdW5jID0gIm1jMmQ6OnJwZXJ0IiksCiAgICAgICAgZGlmZl9wYXJhbXMgPSBsaXN0KGxpc3QobWluID0gLjI1LCBtb2RlID0gLjUwLCBtYXggPSAuNjAsIHNoYXBlID0gMywgZnVuYyA9ICJtYzJkOjpycGVydCIpKSwKICAgICAgICBsbV9wYXJhbXMgPSBsaXN0KG1pbiA9IDEwMCwgbW9kZSA9IDEwMDAsIG1heCA9IDEwMDAwLCBzaGFwZSA9IDMsIGZ1bmMgPSAibWMyZDo6cnBlcnQiKSkKCm15X3Jlc3VsdHMgPC0gcnVuX3NpbXVsYXRpb24obXlfc2NlbiwgaXRlcmF0aW9ucyA9IDEwMDApCmBgYAoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeVJpc2sgV29ya3Nob3AgLSBFeGVyY2lzZSAxIgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6IAogICAgaGlnaGxpZ2h0OiBweWdtZW50cwogICAgdGhlbWU6IHlldGkKICAgIHRvYzogeWVzCi0tLQoKIyMgRXhlcmNpc2UgMSAtIElkZW50aWZ5IHRoZSBPcGVuRkFJUiBmYWN0b3JzCgpgYGB7ciBzZXR1cCwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRX0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZXZhbHVhdG9yKQpgYGAKCmBgYHtyIGVjaG89RkFMU0UsIGZpZy5jYXA9Ik9wZW5GQUlSIG9udG9sb2d5Iiwgb3V0LndpZHRoID0gJzEwMCUnfQprbml0cjo6aW5jbHVkZV9ncmFwaGljcygiZmlndXJlcy9vcGVuZmFpcl9vbnRvbG9neS5wbmciKQpgYGAKCgpNeSBzY2VuYXJpbyBpbiB0aGUgZm9ybWF0IG9mOgoKKldoby9XaGF0KiBpcyBkb2luZyAqd2hhdCBhY3Rpb24qIGFnYWluc3QgKndoYXQgYXNzZXQqIHRoYXQgcmVzdWx0cyBpbiAqd2hhdCBsb3NzKj8KCgo=</div>
 
 
 
