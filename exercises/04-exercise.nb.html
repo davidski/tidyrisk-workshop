@@ -1873,6 +1873,7 @@ $(document).ready(function () {
 <div id="TOC">
 <ul>
 <li><a href="#exercise-4---console-interaction">Exercise 4 - Console Interaction</a></li>
+<li><a href="#review-the-scenario-object">Review the scenario object</a></li>
 </ul>
 </div>
 
@@ -1887,7 +1888,20 @@ $(document).ready(function () {
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>With your cursor in the block below, use the evaluator addin to insert a new scenario. Then populate each of the factors with your estimates.</p>
+<p>With your cursor in the block below, use the evaluator addin to insert a new scenario skeleton. Then populate each of the factors with your estimates.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="review-the-scenario-object" class="section level2">
+<h2>Review the scenario object</h2>
+<p>Print the scenario object, what model is selected?</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Display the scenario parameters by changing the scenario object to a tibble.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
@@ -1927,7 +1941,7 @@ $(document).ready(function () {
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeVJpc2sgV29ya3Nob3AgLSBFeGVyY2lzZSA0IgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6IAogICAgaGlnaGxpZ2h0OiBweWdtZW50cwogICAgdGhlbWU6IHlldGkKICAgIHRvYzogeWVzCi0tLQoKIyMgRXhlcmNpc2UgNCAtIENvbnNvbGUgSW50ZXJhY3Rpb24KCmBgYHtyIHNldHVwLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShldmFsdWF0b3IpCmBgYAoKCldpdGggeW91ciBjdXJzb3IgaW4gdGhlIGJsb2NrIGJlbG93LCB1c2UgdGhlIGV2YWx1YXRvciBhZGRpbiB0byBpbnNlcnQgYSBuZXcgCnNjZW5hcmlvLiBUaGVuIHBvcHVsYXRlIGVhY2ggb2YgdGhlIGZhY3RvcnMgd2l0aCB5b3VyIGVzdGltYXRlcy4KCgpgYGB7cn0KCmBgYAoKUnVuIHRoZSBzaW11bGF0aW9uLCB0aGVuIGxvb2sgYXQgdGhlIHJlc3VsdHMuCgoKYGBge3J9Cm15X3Jlc3VsdHMKYGBgCgpEaXNwbGF5IHRoZSBzdW1tYXJ5IHJlc3VsdHMuCgpgYGB7cn0Kc3VtbWFyaXplX3NjZW5hcmlvKG15X3Jlc3VsdHMpCmBgYAoKTG9vayBhdCB0aGUgbG9zcyBzY2F0dGVycGxvdC4KCmBgYHtyfQpsb3NzX3NjYXR0ZXJwbG90KG15X3Jlc3VsdHMpCmBgYAoKCkxvc3MgYXQgdGhlIHJpc2sgZXhwb3N1cmUgaGlzdG9ncmFtLgoKYGBge3J9CmV4cG9zdXJlX2hpc3RvZ3JhbShteV9yZXN1bHRzKQpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiVGlkeVJpc2sgV29ya3Nob3AgLSBFeGVyY2lzZSA0IgpvdXRwdXQ6IAogIGh0bWxfbm90ZWJvb2s6IAogICAgaGlnaGxpZ2h0OiBweWdtZW50cwogICAgdGhlbWU6IHlldGkKICAgIHRvYzogeWVzCi0tLQoKIyMgRXhlcmNpc2UgNCAtIENvbnNvbGUgSW50ZXJhY3Rpb24KCmBgYHtyIHNldHVwLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShldmFsdWF0b3IpCmBgYAoKV2l0aCB5b3VyIGN1cnNvciBpbiB0aGUgYmxvY2sgYmVsb3csIHVzZSB0aGUgZXZhbHVhdG9yIGFkZGluIHRvIGluc2VydCBhIG5ldyAKc2NlbmFyaW8gc2tlbGV0b24uIFRoZW4gcG9wdWxhdGUgZWFjaCBvZiB0aGUgZmFjdG9ycyB3aXRoIHlvdXIgZXN0aW1hdGVzLgoKYGBge3J9CgpgYGAKCiMjIFJldmlldyB0aGUgc2NlbmFyaW8gb2JqZWN0CgpQcmludCB0aGUgc2NlbmFyaW8gb2JqZWN0LCB3aGF0IG1vZGVsIGlzIHNlbGVjdGVkPwoKYGBge3J9CgpgYGAKCkRpc3BsYXkgdGhlIHNjZW5hcmlvIHBhcmFtZXRlcnMgYnkgY2hhbmdpbmcgdGhlIHNjZW5hcmlvIG9iamVjdCB0byBhIHRpYmJsZS4KCmBgYHtyfQoKYGBgCgoKUnVuIHRoZSBzaW11bGF0aW9uLCB0aGVuIGxvb2sgYXQgdGhlIHJlc3VsdHMuCgpgYGB7cn0KbXlfcmVzdWx0cwpgYGAKCkRpc3BsYXkgdGhlIHN1bW1hcnkgcmVzdWx0cy4KCmBgYHtyfQpzdW1tYXJpemVfc2NlbmFyaW8obXlfcmVzdWx0cykKYGBgCgpMb29rIGF0IHRoZSBsb3NzIHNjYXR0ZXJwbG90LgoKYGBge3J9Cmxvc3Nfc2NhdHRlcnBsb3QobXlfcmVzdWx0cykKYGBgCgoKTG9zcyBhdCB0aGUgcmlzayBleHBvc3VyZSBoaXN0b2dyYW0uCgpgYGB7cn0KZXhwb3N1cmVfaGlzdG9ncmFtKG15X3Jlc3VsdHMpCmBgYAoK</div>
 
 
 

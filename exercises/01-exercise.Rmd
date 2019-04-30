@@ -29,3 +29,4 @@ my_scen <- tidyrisk_scenario(
 my_results <- run_simulation(my_scen, iterations = 1000)
 ```
 
+

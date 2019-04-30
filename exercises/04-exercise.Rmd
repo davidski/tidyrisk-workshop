@@ -14,17 +14,29 @@ library(tidyverse)
 library(evaluator)
 ```
 
-
 With your cursor in the block below, use the evaluator addin to insert a new 
-scenario. Then populate each of the factors with your estimates.
-
+scenario skeleton. Then populate each of the factors with your estimates.
 
 ```{r}
 
 ```
 
-Run the simulation, then look at the results.
+## Review the scenario object
 
+Print the scenario object, what model is selected?
+
+```{r}
+
+```
+
+Display the scenario parameters by changing the scenario object to a tibble.
+
+```{r}
+
+```
+
+
+Run the simulation, then look at the results.
 
 ```{r}
 my_results
